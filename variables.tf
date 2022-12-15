@@ -1,15 +1,14 @@
-variable "aws_profile" {
-  type = string
-}
-
-variable "aws_region" {
-  type = string
-}
-
 variable "cluster_name" {
-  type = string
+  type        = string
+  description = "EKS Cluster name."
 }
 
 variable "tags" {
-  type = map(string)
+  type        = map(string)
+  description = "AWS Tags."
+}
+
+variable "aws_region" {
+  type        = string
+  description = "The AWS region the autoscaler will be running in."
 }

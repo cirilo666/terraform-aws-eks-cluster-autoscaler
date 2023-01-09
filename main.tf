@@ -84,7 +84,7 @@ module "iam_role" {
 
   cluster_service_accounts = {
     (var.cluster_name) = [
-      "system:serviceaccount:kube-system:${local.name}"
+      "kube-system:${local.name}"
     ]
   }
 
